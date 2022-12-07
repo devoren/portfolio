@@ -8,7 +8,7 @@ const Text = (isVisible: boolean) => {
 	const [text, setText] = useState("");
 	const [delta, setDelta] = useState(500 - Math.random() * 100);
 	const toRotate = useMemo(
-		() => ["Web Developer", "Mobile Developer", "UI/UX Designer"],
+		() => ["Web Developer", "Mobile Developer", "UI/UX Developer"],
 		[]
 	);
 
