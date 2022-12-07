@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { Col, Row } from "react-bootstrap";
 import { Context } from "src/App";
 
@@ -18,6 +18,7 @@ interface FormProps {
 const Form = (props: FormProps) => {
 	const { handleSubmit, formDetails, onFormUpdate, buttonText } = props;
 	const isDesktop = useContext(Context);
+	const ref = useRef<HTMLFormElement | null>(null);
 
 	const isDisabled =
 		formDetails.email === "" ||
@@ -35,7 +36,13 @@ const Form = (props: FormProps) => {
 			: "";
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form
+			onSubmit={(e) => {
+				handleSubmit(e);
+				ref.current?.reset();
+			}}
+			ref={ref}
+		>
 			<Row>
 				<Col size={12} sm={6} className="px-1">
 					<input
