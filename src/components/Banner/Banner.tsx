@@ -55,7 +55,7 @@ const Banner = forwardRef(
 				<Container>
 					<Row className="align-items-center">
 						<Col xs={12} md={6} xl={7}>
-							<TrackVisibility once>
+							<TrackVisibility once partialVisibility>
 								{({ isVisible }) => {
 									return (
 										<div
@@ -106,7 +106,7 @@ const Banner = forwardRef(
 							</TrackVisibility>
 						</Col>
 						<Col xs={12} md={6} xl={5}>
-							<TrackVisibility once>
+							<TrackVisibility once partialVisibility>
 								{({ isVisible }) => (
 									<div
 										className={

@@ -53,12 +53,23 @@ const Contact = forwardRef(
 					"Content-Type": "application/json;charset=utf-8",
 				},
 				body: JSON.stringify(formDetails),
-			});
-			setButtonText("Send");
-			let result = await response.json();
+			})
+				.then((data) => data)
+				.catch((e: Error) => {
+					setStatus({
+						success: false,
+						message: e.message,
+					});
+				})
+				.finally(() => setButtonText("Send"));
+
+			let result;
+			if (response instanceof Response) {
+				result = await response.json();
+			}
 
 			setFormDetails(formInitialDetails);
-			if (response.status == 200) {
+			if (response instanceof Response && response.status == 200) {
 				setStatus({
 					success: true,
 					message: result.message,
@@ -69,6 +80,7 @@ const Contact = forwardRef(
 					message: "Something went wrong, please try again later.",
 				});
 			}
+			setButtonText("Send");
 			setToastState(true);
 		};
 
