@@ -18,7 +18,6 @@ const Projects = forwardRef(
 		const isDesktop = useContext(Context);
 		const [data, setData] = useState<IProject[]>([]);
 		const [isLoading, setIsLoading] = useState(false);
-		const itemsRef = useRef(false);
 		const getItems = async () => {
 			setIsLoading(true);
 			const data = await getAllProjects();
@@ -36,12 +35,7 @@ const Projects = forwardRef(
 		);
 
 		useEffect(() => {
-			if (itemsRef.current) {
-				getItems();
-			}
-			return () => {
-				itemsRef.current = true;
-			};
+			getItems();
 		}, []);
 
 		return (
