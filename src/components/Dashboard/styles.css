@@ -1,0 +1,151 @@
+.dashboard-brand {
+	display: flex;
+	width: 32px;
+	cursor: pointer;
+	padding-top: 25px;
+}
+
+.sign {
+	height: 100vh;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+}
+
+input.input,
+textarea.input {
+	width: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 8px;
+	color: #fff;
+	margin: 0 0 8px 0;
+	padding: 18px 26px;
+	font-weight: 500;
+	font-size: 18px;
+	letter-spacing: 0.8px;
+	transition: 0.3s ease-in-out;
+}
+
+input.input :focus,
+textarea.input :focus {
+	background: rgba(255, 255, 255, 1);
+	color: #121212;
+}
+
+input.input ::placeholder,
+textarea.input ::placeholder {
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+}
+
+input.input :focus::placeholder,
+textarea.input:focus::placeholder {
+	color: #121212;
+	opacity: 0.8;
+}
+
+.checkbox:nth-child(1) {
+	margin-right: 8px;
+}
+
+.image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 800px;
+	border-width: 2px;
+	border-style: dotted;
+	border-color: rgb(209 213 219);
+	cursor: pointer;
+	border-radius: 8px;
+	margin-top: 10px;
+}
+
+.label {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.label > div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+.label > div > p {
+	color: rgb(107 114 128);
+}
+
+.label > div > p:hover {
+	color: rgb(55 65 810);
+}
+
+.label > input {
+	width: 0;
+	height: 0;
+}
+
+.image__uploaded__content {
+	position: relative;
+	height: 100%;
+}
+
+.image__uploaded__content > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.image__uploaded__content > button {
+	position: absolute;
+	bottom: 0.75rem /* 12px */;
+	right: 0.75rem /* 12px */;
+	padding: 0.75rem /* 12px */;
+	border-radius: 9999px;
+	background-color: rgb(239 68 68);
+	font-size: 1.25rem /* 20px */;
+	line-height: 1.75rem /* 28px */;
+	cursor: pointer;
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+	transition: all 0.5s ease-in-out;
+}
+
+.save {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.save > button {
+	margin-left: auto;
+	margin-left: 0px;
+	background-color: rgb(16 185 129);
+	border-style: none;
+	padding-left: 3rem /* 48px */;
+	padding-right: 3rem /* 48px */;
+	padding-top: 0.5rem /* 8px */;
+	padding-bottom: 0.5rem /* 8px */;
+	font-size: 1.125rem /* 18px */;
+	line-height: 1.75rem /* 28px */;
+	font-weight: 600;
+	margin-bottom: 20px;
+}

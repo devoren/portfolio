@@ -1,0 +1,16 @@
+.error {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.image {
+	width: 50%;
+	margin: auto;
+	display: block;
+}
+
+img {
+	width: 100%;
+}
