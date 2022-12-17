@@ -1,18 +1,11 @@
 import "./styles.css";
 
-import {
-	forwardRef,
-	memo,
-	useEffect,
-	useState,
-	useContext,
-	useCallback,
-} from "react";
+import { forwardRef, memo, useCallback, useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
 import TrackVisibility from "react-on-screen";
 import { headerImg } from "src/assets/img";
 
+import { ArrowRight } from "./ArrowRight";
 import Text from "./Text";
 
 const Banner = forwardRef(
@@ -98,7 +91,7 @@ const Banner = forwardRef(
 											</p>
 											<a href="#connect">
 												Let's connect
-												<ArrowRightCircle size={25} />
+												<ArrowRight />
 											</a>
 										</div>
 									);

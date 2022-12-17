@@ -42,3 +42,9 @@ export const Shuffle = (items: any) => {
 	}
 	return items;
 };
+
+export const isWinter = () => {
+	const WINTER_MONTHS = [0, 1, 11];
+	let month = new Date().getMonth();
+	return WINTER_MONTHS.includes(month);
+};

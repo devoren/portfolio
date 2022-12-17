@@ -1,5 +1,5 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 import { createContext, useLayoutEffect, useRef, useState } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -11,10 +11,11 @@ import NavBar from "src/components/NavBar";
 import Projects from "src/components/Projects";
 import Skills from "src/components/Skills";
 
+import Snowfall from "react-snowfall";
 import Dashboard from "./components/Dashboard";
 import NotFound from "./components/NotFound";
-import { useWindowDimensions } from "./utils";
 import { AuthContextProvider } from "./context/AuthContext";
+import { isWinter, useWindowDimensions } from "./utils";
 
 export const Context = createContext<boolean>(false);
 
@@ -56,6 +57,17 @@ function App() {
 
 	return (
 		<Context.Provider value={isDesktop}>
+			{isWinter() ? (
+				<Snowfall
+					style={{
+						width: "100%",
+						height: "100%",
+					}}
+					speed={[0.25, 2.0]}
+					snowflakeCount={300}
+					wind={[-0.1, 0.1]}
+				/>
+			) : null}
 			<div className="App">
 				<Routes>
 					<Route path="/" element={<Main />} />
