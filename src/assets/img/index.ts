@@ -33,6 +33,7 @@ import postgresql from "./postgresql.svg";
 import mongodb from "./mongodb.svg";
 import redux from "./redux.svg";
 import dots from "./dots.svg";
+import snowflake from "./snowflake.svg";
 
 export {
 	logo,
@@ -70,4 +71,5 @@ export {
 	mongodb,
 	redux,
 	dots,
+	snowflake,
 };

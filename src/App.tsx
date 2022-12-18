@@ -16,6 +16,10 @@ import Dashboard from "./components/Dashboard";
 import NotFound from "./components/NotFound";
 import { AuthContextProvider } from "./context/AuthContext";
 import { isWinter, useWindowDimensions } from "./utils";
+import { snowflake as snowflakeImg } from "./assets/img";
+
+const snowflake = document.createElement("img");
+snowflake.src = snowflakeImg;
 
 export const Context = createContext<boolean>(false);
 
@@ -60,12 +64,16 @@ function App() {
 			{isWinter() ? (
 				<Snowfall
 					style={{
-						width: "100%",
-						height: "100%",
+						position: "fixed",
+						width: "100vw",
+						height: "100vh",
 					}}
-					speed={[0.25, 2.0]}
-					snowflakeCount={300}
-					wind={[-0.1, 0.1]}
+					radius={[10, 30]}
+					speed={[0.25, 1.8]}
+					snowflakeCount={120}
+					wind={[-0.5, 0.2]}
+					rotationSpeed={[-0.5, 0.3]}
+					images={[snowflake]}
 				/>
 			) : null}
 			<div className="App">
