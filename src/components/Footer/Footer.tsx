@@ -39,7 +39,8 @@ const Footer = () => {
 						</div>
 					)}
 					<p className="justify-center">
-						Copyright 2022. All Rights Reserved
+						Copyright {new Date().getFullYear()}. All Rights
+						Reserved
 					</p>
 				</Row>
 			</Container>

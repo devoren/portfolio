@@ -3,7 +3,7 @@ import { IProject } from "src/model";
 
 const ProjectCard = ({ title, description, imgURL, link }: IProject) => {
 	return (
-		<Col size={12} sm={6} md={4}>
+		<Col size={12} sm={6} md={4} className="proj-container">
 			<div className="proj-imgbx">
 				<img src={imgURL} alt="card-img" />
 				<div className="proj-txtx">
